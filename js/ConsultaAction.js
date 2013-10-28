@@ -1,7 +1,14 @@
+/**
+ * Función que ejecuta la acción del botón click
+ * ejecutando la validación y posterior llamado
+ * ajax a la api con json, reescribiendo si la
+ * data es correcta un div con la información
+ * respectiva en relación a la tarjeta bip!
+ */
 $("button").click(function() {
 	if (validate()) {
 		var data = "numberBip=";
-		data += document.getElementById("idTarjeta").value;
+		data += $.trim(document.getElementById("idTarjeta").value);
 
 		try {
 			$.ajax({
@@ -20,6 +27,13 @@ $("button").click(function() {
 	}
 });
 
+/**
+ * Función que recibe la respuesta ajax
+ * para luego procesarla y formatear el
+ * div indicado.
+ * 
+ * @param {Object} ajaxResponse
+ */
 function successCallback(ajaxResponse) {
 	var dataProcess = processObject(ajaxResponse);
 
@@ -63,23 +77,46 @@ function successCallback(ajaxResponse) {
 	}
 	
 	html += "</table>";
+	html += "<br />";
+	html += '<button id="volver" class="button" onclick="inicio();" style="color: rgb(255, 255, 255); background-color: rgb(77, 178, 39);">Volver</button>';
 	document.getElementById('divForm').innerHTML = html;
 }
 
+/**
+ * Función que retorna a la web de inicio.
+ */
+function inicio(){
+	window.location="index.html";
+}
+
+/**
+ * Función que valida el objeto
+ * json entregado como parámetro.
+ * 
+ * @param {Object} ajaxResponse
+ */
 function processObject(ajaxResponse) {
 	if ( typeof ajaxResponse == "string")
 		ajaxResponse = $.parseJSON(ajaxResponse);
 	return ajaxResponse;
 }
 
+/**
+ * Función que es llamada para el
+ * error de la transacción ajax.
+ */
 function errorCallback() {
 	alert("No existe información asociada, revise");
 }
 
+/**
+ * Función que valida el campo del ID
+ * de la tarjeta.
+ */
 function validate() {
 	var id = document.getElementById("idTarjeta").value;
 
-	if (id == "") {
+	if ($.trim(id) == "") {
 		alert("Debe indicar Número de Tarjeta");
 		return false;
 	} else {
