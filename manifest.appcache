@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# Version 0.6799999
+
+index.html
+about.html
+css/demo.css
+css/menu.css
+css/model.css
+css/style.css
+images/consultabip.png
+images/gplus.png
+images/mail.png
+images/psepcl.png
+images/twitter.png
+js/ConsultaAction.js
+js/jquery-1.9.1.js
+js/menu.js
+
+NETWORK:
+*
+
+FALLBACK:
+/fallback.html

@@ -1,0 +1,118 @@
+/* buysellads */
+.one .bsa_it_ad .bsa_it_d {
+font-size: 11px;
+color: #767676;
+line-height: 135%;
+}
+.one .bsa_it_ad .bsa_it_i{
+display:block;
+	width:130px;
+	max-width:100%;
+	padding:0 0 10px 0;
+}
+.one .bsa_it_ad .bsa_it_t {
+display: block;
+font-size: 12px;
+font-weight: bold;
+color: #212121;
+line-height: 125%;
+}
+
+.one .bsa_it_ad .bsa_it_t,
+.one .bsa_it_ad .bsa_it_d {
+	display: block;
+	padding: 0 0 5px 0;
+}
+.one .bsa_it_p {
+display: block;
+text-align: right;
+font-size:10px;
+}
+.one .bsa_it_p a:first-letter{
+text-transform:uppercase;
+}
+#bsap_1273962{
+	width:130px;
+	padding:0 0 10px 0;
+	margin:20px auto;
+	text-align:left;
+}
+
+.demo_header > a{
+	font-size:12px;
+	text-decoration:none;
+	color: #767676;
+	background:#f9f9f9;
+	display:block;
+	padding:10px;
+}
+.demo_header > a:hover{
+	color:#565656;
+}
+.demo_header{
+	background:#eee;
+	color: #363636;
+	z-index:10;
+	border: 1px solid #ddd;
+	border-right: none;
+	padding:0;
+	position:relative;
+	opacity:1;
+	text-align:center;
+}
+/* InfluAds 
+.influads_block{
+	text-align:center;
+	max-width:130px;
+	padding: 15px 0;
+	margin:0 auto;
+}
+.influads_link_img{
+	display:block;
+	width:130px;
+	max-width:100%;
+	padding:0 10px 0 0;
+	margin:0 auto;
+}
+.influads_text{
+	padding-bottom:5px;
+}
+.influads_text,
+.influads_powered_div{
+	width:130px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:1.5em;
+}
+.influads_text_a,
+.influads_powered_link{
+	text-decoration:none;
+}
+.influads_text_a{
+	color:#767676;
+}
+.influads_powered_link{
+	font-size:10px;
+	color:#aaa;
+}
+*/
+.clear{
+	clear:both;
+}
+/* foo */
+.foo-bot{margin:0 0 100px 0;}
+.foo{
+	position:fixed;
+	bottom:0;
+	right:0;
+	width:100%;
+	background:#fff;
+	text-align:center;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	max-width:100%;
+}
+.foo .adsense{margin-bottom:-4px;}
+.foo a{font-size:12px; color:#fff;text-shadow:1px 1px 0 #565656; display:block;
+	background:#88aa00; padding:5px; width:100%; text-align:center;}
