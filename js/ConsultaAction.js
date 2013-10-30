@@ -44,6 +44,7 @@ function successCallback(ajaxResponse) {
 
 	var aux	= 0;
 	var html= "<article>";
+	html	+= "<ul style='font-size: 1.1em;'><li type='disc'>Saldo correspondiente a la fecha indicada.</li></ul>";
 	html 	+= "<table border='1' style='width: 100%;'>";
 	for (var i in dataProcess) {
 		var obj = dataProcess[i];
