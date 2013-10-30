@@ -42,8 +42,9 @@ function successCallback(ajaxResponse) {
 		return;
 	}
 
-	var aux = 0;
-	var html= "<table border='1' style='width: 100%;'>";
+	var aux	= 0;
+	var html= "<article>";
+	html 	+= "<table border='1' style='width: 100%;'>";
 	for (var i in dataProcess) {
 		var obj = dataProcess[i];
 
@@ -79,6 +80,7 @@ function successCallback(ajaxResponse) {
 	html += "</table>";
 	html += "<br />";
 	html += '<button id="volver" class="button" onclick="inicio();" style="color: rgb(255, 255, 255); background-color: rgb(77, 178, 39);">Volver</button>';
+	html += "</article>";
 	document.getElementById('divForm').innerHTML = html;
 }
 
