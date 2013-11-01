@@ -15,6 +15,7 @@ images/twitter.png
 js/ConsultaAction.js
 js/jquery-1.9.1.js
 js/menu.js
+js/jquery.blockUI.js
 
 NETWORK:
 *
