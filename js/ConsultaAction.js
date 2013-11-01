@@ -11,6 +11,22 @@ $("button").click(function() {
 		data += $.trim(document.getElementById("idTarjeta").value);
 
 		try {
+			$(document).ajaxStart(
+				$.blockUI({ centerY: 0, 
+							css: { 
+            					border: 'none', 
+            					padding: '15px', 
+            					backgroundColor: '#000',
+            					opacity: .5, 
+            					color: '#F9F9F9',
+            					top: '40px', 
+            					left: '', 
+            					right: '10px'
+        					},
+        					message: '<h1>Espere</h1>' 
+        				   })
+			).ajaxStop($.unblockUI);
+			
 			$.ajax({
 				type : 'GET',
 				dataType : 'json',
