@@ -6,9 +6,11 @@
  * respectiva en relación a la tarjeta bip!
  */
 $("button").click(function() {
-	if (validate()) {
+	var id = parsedId();
+	
+	if (id > 0) {
 		var data = "numberBip=";
-		data += $.trim(document.getElementById("idTarjeta").value);
+		data += id;
 
 		try {
 			$(document).ajaxStart(
@@ -115,7 +117,7 @@ function inicio(){
  * @param {Object} ajaxResponse
  */
 function processObject(ajaxResponse) {
-	if ( typeof ajaxResponse == "string")
+	if (typeof ajaxResponse == "string")
 		ajaxResponse = $.parseJSON(ajaxResponse);
 	return ajaxResponse;
 }
@@ -130,15 +132,16 @@ function errorCallback() {
 
 /**
  * Función que valida el campo del ID
- * de la tarjeta.
+ * de la tarjeta, retornándolo como entero
  */
-function validate() {
-	var id = document.getElementById("idTarjeta").value;
+function parsedId() {
+	var id = parseInt($("#idTarjeta").val());
 
-	if ($.trim(id) == "") {
-		alert("Debe indicar Número de Tarjeta");
-		return false;
+	if (isNaN(id) || id == 0) {
+		alert("Debe indicar Número de Tarjeta válido");
+		$("#idTarjeta").val("");
+		return 0;
 	} else {
-		return true;
+		return id;
 	}
 }
