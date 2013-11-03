@@ -19,7 +19,7 @@ if (navigator.mozApps) {
 			// to connect the button with an action) the app gets installed. If the installation
 			// is successful, the install instructions are hidden.
 			var install = document.querySelector("#install"), manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp";
-			
+
 			install.className = "show-install";
 			// connect the click on the button with the installation
 			install.onclick = function() {
@@ -56,8 +56,12 @@ $(function() {
 	$('#menu a[rel!="external"]').on('click', function() {
 		var _t = this;
 		$('#menu').one('closed.mm', function() {
+			window.location = _t.href;
+			
 			$.mobile.changePage(_t.href, {
-				transition : 'slide'
+				transition : 'slide', 
+				reloadPage: true,
+				allowSamePageTransition: true
 			});
 		});
 	});
@@ -100,10 +104,6 @@ $("#consultar").click(function() {
 					backgroundColor : '#000',
 					opacity : .5,
 					color : '#F9F9F9'
-					//,
-					//top: '40px',
-					//left: '',
-					//right: '10px'
 				},
 				message : '<h1>Espere</h1>'
 			})).ajaxStop($.unblockUI);
@@ -141,7 +141,7 @@ function successCallback(ajaxResponse) {
 
 	var aux = 0;
 	var html = "<article>";
-	html += "<ul style='font-size: 0.7em;'><li type='disc'>Saldo correspondiente a la fecha indicada.</li></ul>";
+	html += "<ul style='font-size: 1em;'><li type='disc'>Saldo correspondiente a la fecha indicada.</li></ul>";
 	html += '<table style="width: 100%;">';
 	for (var i in dataProcess) {
 		var obj = dataProcess[i];
@@ -178,7 +178,7 @@ function successCallback(ajaxResponse) {
 	html += "</table>";
 	html += "<br />";
 	html += '<div class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-disabled="false" aria-disabled="false">';
-	html += '<span class="ui-btn-inner"><span class="ui-btn-text">Volver</span></span>';
+	html += '<span class="ui-btn-inner"><span class="ui-btn-text">Ir al Inicio</span></span>';
 	html += '<button class="ui-btn-hidden" data-disabled="false"  onclick="inicio();">Ir al Inicio</button></div>';
 	html += "</article>";
 	document.getElementById('divForm').innerHTML = html;
@@ -225,4 +225,110 @@ function parsedId() {
 	} else {
 		return id;
 	}
+}
+
+/**
+ * Para efectos de entrada de datos de favoritos
+ * @param {Object} idTarjeta
+ */
+function loadData(idTarjeta) {
+	var id = parseInt(idTarjeta);
+
+	if (!isNaN(id) && id > 0) {
+		var data = "numberBip=";
+		data += id;
+
+		try {
+			$(document).ajaxStart($.blockUI({
+				centerX : 1,
+				centerY : 1,
+				css : {
+					border : 'none',
+					padding : '15px',
+					backgroundColor : '#000',
+					opacity : .5,
+					color : '#F9F9F9'
+				},
+				message : '<h1>Espere</h1>'
+			})).ajaxStop($.unblockUI);
+
+			$.ajax({
+				type : 'GET',
+				dataType : 'json',
+				url : 'http://www.psep.cl/api/Bip.php?',
+				data : data,
+				success : successCallback2,
+				error : errorCallback
+
+			});
+		} catch(e) {
+			alert(e.description);
+		}
+
+	}
+}
+
+/**
+ * Función que redirige a favoritos
+ */
+function irFavoritos() {
+	window.location = "favoritos.html";
+}
+
+
+/**
+ * Para efectos de favoritos
+ * @param {Object} ajaxResponse
+ */
+function successCallback2(ajaxResponse) {
+	var dataProcess = processObject(ajaxResponse);
+
+	if (!dataProcess) {
+		alert("No existe información asociada");
+		return;
+	}
+
+	var aux = 0;
+	var html = "<article>";
+	html += "<ul style='font-size: 1em;'><li type='disc'>Saldo correspondiente a la fecha indicada.</li></ul>";
+	html += '<table style="width: 100%;">';
+	for (var i in dataProcess) {
+		var obj = dataProcess[i];
+
+		switch(aux) {
+			case 0:
+				html += "<tr><td>Número Tarjeta</td>";
+				html += "<td>";
+				html += obj;
+				html += "</td></tr>";
+				break;
+			case 1:
+				html += "<tr><td>Estado Contrato</td>";
+				html += "<td>";
+				html += obj;
+				html += "</td></tr>";
+				break;
+			case 2:
+				html += "<tr><td>Saldo Tarjeta</td>";
+				html += "<td>";
+				html += obj;
+				html += "</td></tr>";
+				break;
+			case 3:
+				html += "<tr><td>Fecha Saldo</td>";
+				html += "<td>";
+				html += obj;
+				html += "</td></tr>";
+				break;
+		}
+		aux++;
+	}
+
+	html += "</table>";
+	html += "<br />";
+	html += '<div class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-disabled="false" aria-disabled="false">';
+	html += '<span class="ui-btn-inner"><span class="ui-btn-text">Volver a Favoritos</span></span>';
+	html += '<button class="ui-btn-hidden" data-disabled="false" onclick="irFavoritos();">Volver a Favoritos</button></div>';
+	html += "</article>";
+	document.getElementById('divFavorito').innerHTML = html;
 }

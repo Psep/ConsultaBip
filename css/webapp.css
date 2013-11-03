@@ -24,3 +24,31 @@ table, td, th {
 	height: 40px;
 	position: absolute;
 }
+
+.divTable {
+	width: 100%;
+	display: table;
+}
+
+.divTd {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.lista {
+	list-style-type: decimal-leading-zero;
+	padding-left: 2em;
+	font-size: 1.5em;
+}
+
+.todo-span {
+	font-weight: bold;
+}
+
+.ui-checkbox .todo-checkbox{
+	background: #fff;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	text-indent: -1000em;
+}
