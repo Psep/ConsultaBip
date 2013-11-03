@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="robots" content="index,follow" />
+		<meta name="author" content="Pablo Sepúlveda P. @psep" />
+		<meta name="Description" content="Consulta el Saldo de tu Tarjeta Bip! del Transantiago"/>
+		<meta name="keywords" content="saldo, consulta, tarjeta, bip!, transantiago" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Consulta tu SaldoBip!</title>
+
+		<link rel="shortcut icon" href="images/logo32.png"/>
+		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+		<link type="text/css" rel="stylesheet" href="css/main.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
+		<link type="text/css" rel="stylesheet" href="css/webapp.css" />
+	</head>
+	<body>
+		<div data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"> </a>
+				SaldoBip!
+			</div>
+			<div class="content" data-role="content">
+				<div id="divFavorito" style="font-size: 0.9em;">
+					<p>
+						<h1>Favoritos</h1>
+					</p>
+					<p>
+						Agrega los números de tus tarjetas para una búsqueda más rápida:
+					</p>
+					<article>
+						<div class="divTable">
+							<div class="divTd" style="width: 50%;">
+								<input type="number" id="new-todo" name="new-todo"
+										placeholder="N° Bip!" size="10"  maxlength="15"/>
+							</div>
+							<div class="divTd" style="width: 10%;">
+
+							</div>
+							<div class="divTd" style="width: 40%;">
+								<input id="addNumber" type="button" value="Agregar" />
+							</div>
+						</div>
+						<br />
+						<div style="font-size: 1.2em;">
+							<p>
+								Tarjetas agregadas (Click en el check para eliminar y en el número para revisar datos):
+							</p>
+							<ul id="todo-items" class="lista">
+
+							</ul>
+						</div>
+					</article>
+					<br />
+					<p>
+						<button onclick="inicio();">
+							Ir al Inicio
+						</button>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<nav id="menu">
+			<ul>
+				<li class="Selected">
+					<a href="index.html">Consulta tu Saldo</a>
+				</li>
+				<li>
+					<a href="favoritos.html">Favoritos</a>
+				</li>
+				<li>
+					<a href="terminos-uso.html">Terminos de Uso</a>
+				</li>
+				<li class="Label">
+					Links Externos
+				</li>
+				<li>
+					<label id="psep" onclick="window.open('http://www.psep.cl/');"> Psep.cl </label>
+				</li>
+				<li>
+					<label id="webOficial" onclick="window.open('http://psep.github.io/ConsultaBip/')"> Web Oficial </label>
+				</li>
+			</ul>
+		</nav>
+		<img src="" id="install" class="friends right ui-link"/>
+	</body>
+	<footer>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+		<script type="text/javascript" src="js/webapp.js"></script>
+		<script type="text/javascript" src="js/db.js"></script>
+	</footer>
+</html>
