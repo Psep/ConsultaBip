@@ -1,16 +1,14 @@
 /**
  * Se comprueba si el navegador soporta IndexedDB
  */
-function cargaPag() {
-	window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-	window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-	window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-	if (!window.indexedDB) {
-		document.getElementById('divFavorito').innerHTML = '<p><h1>Lamentablemente tu navegador no soporta esta funcionalidad.</h1></p>';
-	} else {
-		refreshTodos();
-	}
+window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+
+if (!window.indexedDB) {
+	document.getElementById('divFavorito').innerHTML = '<p><h1>Lamentablemente tu navegador no soporta esta funcionalidad.</h1></p>';
 }
+
 
 /**
  * Carga de datos
