@@ -21,7 +21,6 @@
 			<div class="header">
 				<a href="#menu" data-ajax="false"> </a>
 				SaldoBip!
-				<img src="" id="install" class="friends right ui-link"/>
 			</div>
 			<div id="content" data-role="content">
 				<p>
@@ -42,11 +41,34 @@
 			</div>
 		</div>
 
+		<div id="favoritos" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"> </a>
+				SaldoBip!
+			</div>
+			<div class="content" data-role="content">
+				<div style="font-size: 0.9em;">
+					<p>
+						<h1>Favoritos</h1>
+					</p>
+					<article>
+						<p>
+							asd
+						</p>
+					</article>
+					<p>
+						<button onclick="inicio();">
+							Ir al Inicio
+						</button>
+					</p>
+				</div>
+			</div>
+		</div>
+
 		<div id="acerca-de" data-role="page">
 			<div class="header">
 				<a href="#menu" data-ajax="false"> </a>
 				SaldoBip!
-				<a class="friends right" href="#" onclick="alert('hiciste click!')"> </a>
 			</div>
 			<div class="content" data-role="content">
 				<div style="font-size: 0.9em;">
@@ -64,7 +86,7 @@
 					</article>
 					<p>
 						<button onclick="inicio();">
-							Volver
+							Ir al Inicio
 						</button>
 					</p>
 				</div>
@@ -75,7 +97,6 @@
 			<div class="header">
 				<a href="#menu" data-ajax="false"> </a>
 				SaldoBip!
-				<a class="friends right" href="#" onclick="alert('hiciste click!')"> </a>
 			</div>
 			<div class="content" data-role="content">
 				<div style="font-size: 0.9em;">
@@ -92,7 +113,7 @@
 					</article>
 					<p>
 						<button onclick="inicio();">
-							Volver
+							Ir al Inicio
 						</button>
 					</p>
 				</div>
@@ -103,6 +124,9 @@
 			<ul>
 				<li class="Selected">
 					<a href="index.html">Consulta tu Saldo</a>
+				</li>
+				<li>
+					<a href="index.html#favoritos">Favoritos</a>
 				</li>
 				<li>
 					<a href="index.html#acerca-de">Acerca de</a>
@@ -121,7 +145,7 @@
 				</li>
 			</ul>
 		</nav>
-
+		<img src="" id="install" class="friends right ui-link"/>
 	</body>
 	<footer>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
