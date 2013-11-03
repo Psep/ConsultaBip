@@ -4,7 +4,7 @@
     "launch_path": "/index.html",
     "description": "Consulta el Saldo de la Tarjeta Bip!",
     "developer": {
-        "name": "Pablo Sepúlveda",
+        "name": "Pablo Sepulveda",
         "url": "http://www.psep.cl"
     },
     "locales": {
@@ -20,15 +20,5 @@
         "64": "/images/logo64.png",
         "128": "/images/logo128.png"
     },
-    "installs_allowed_from": [
-		"https://marketplace.firefox.com",
-		"http://consultabip.psep.cl"
-	],
-    "default_locale": "es",
-    "orientation": ["portrait"],
-  	"permissions": {
-    	"desktop-notification": {
-      		"description" : "Mostrar notificaciones"
-    	}
-  	}
+    "default_locale": "es"
 }
