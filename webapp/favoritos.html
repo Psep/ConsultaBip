@@ -17,7 +17,7 @@
 		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
 		<link type="text/css" rel="stylesheet" href="css/webapp.css" />
 	</head>
-	<body>
+	<body onload="load();">
 		<div data-role="page">
 			<div class="header">
 				<a href="#menu" data-ajax="false"> </a>
@@ -41,7 +41,7 @@
 
 							</div>
 							<div class="divTd" style="width: 40%;">
-								<input id="addNumber" type="button" value="Agregar" />
+								<input id="addNumber" type="button" value="Agregar" onclick="addNumber();"/>
 							</div>
 						</div>
 						<br />

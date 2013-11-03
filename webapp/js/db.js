@@ -9,31 +9,30 @@ if (!window.indexedDB) {
 	document.getElementById('divFavorito').innerHTML = '<p><h1>Lamentablemente tu navegador no soporta esta funcionalidad.</h1></p>';
 }
 
-
 /**
  * Carga de datos
  */
-$(function() {
+function load() {
 	// Display the todo items.
 	todoDB.open(refreshTodos);
+}
 
-	$("#addNumber").click(function() {
-		var item = 0;
-		var id = $.trim($("#new-todo").val());
-		item = parseInt(id);
 
-		if (!isNaN(item) && item > 0) {
-			todoDB.createTodo(item, function(todo) {
-				refreshTodos();
-			});
-			alert("Tarjeta N°" + item + " agregada.");
-		} else {
-			alert("Ingrese un número válido");
-		}
-		$("#new-todo").val("");
-	});
+function addNumber() {
+	var item = 0;
+	var id = $.trim($("#new-todo").val());
+	item = parseInt(id);
 
-});
+	if (!isNaN(item) && item > 0) {
+		todoDB.createTodo(item, function(todo) {
+			refreshTodos();
+		});
+		alert("Tarjeta N°" + item + " agregada.");
+	} else {
+		alert("Ingrese un número válido");
+	}
+	$("#new-todo").val("");
+}
 
 // Update the list of todo items.
 function refreshTodos() {
