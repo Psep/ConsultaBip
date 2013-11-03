@@ -137,7 +137,7 @@ html.mm-blocking #mm-blocker {
   text-decoration: none; }
 .mm-list > li {
   position: relative; }
-  .mm-list > li > a,
+  .mm-list > li > a, label,
   .mm-list > li > span {
     text-overflow: ellipsis;
     white-space: nowrap;
