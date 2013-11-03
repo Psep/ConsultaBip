@@ -1,7 +1,7 @@
 {
     "version": "1.2",
     "name": "SaldoBip!",
-    "launch_path": "/ConsultaBip/webapp/index.html",
+    "launch_path": "index.html",
     "description": "/Consulta el Saldo de la Tarjeta Bip!",
     "developer": {
         "name": "Pablo Sepulveda",
@@ -14,8 +14,8 @@
     	}
   	},
     "icons": {
-	"128": "/ConsultaBip/webapp/images/logo128.png",
-        "60": "/ConsultaBip/webapp/images/logo64.png"
+	"128": "images/logo128.png",
+        "60": "images/logo64.png"
     },
     "default_locale": "es"
 }
