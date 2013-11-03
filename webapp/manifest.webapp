@@ -14,11 +14,8 @@
     	}
   	},
     "icons": {
-        "16": "/ConsultaBip/webapp/images/logo16.png",
-        "32": "/ConsultaBip/webapp/images/logo32.png",
-        "48": "/ConsultaBip/webapp/images/logo48.png",
-        "64": "/ConsultaBip/webapp/images/logo64.png",
-	"128": "/ConsultaBip/webapp/images/logo128.png"
+	"128": "/ConsultaBip/webapp/images/logo128.png",
+        "60": "/ConsultaBip/webapp/images/logo64.png"
     },
     "default_locale": "es"
 }
