@@ -2,6 +2,8 @@ CACHE MANIFEST
 # Version 0.6799999
 
 index.html
+favoritos.html
+terminos-uso.html
 css/jquery.mmenu.css
 css/jquery.mobile-1.2.0.min.css
 css/main.css
