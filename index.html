@@ -1,59 +1,133 @@
 <!DOCTYPE html>
-<html manifest="manifest.appcache">
+<html>
 	<head>
 		<meta charset="utf-8" />
-		<title>ConsultaBip!</title>
-		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css"/>
-		<link href="css/model.css" rel="stylesheet" type="text/css" />
-		<link href="css/demo.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="css/menu.css" type="text/css"/>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="robots" content="index,follow" />
+		<meta name="author" content="Pablo Sepúlveda P. @psep" />
+		<meta name="Description" content="Consulta el Saldo de tu Tarjeta Bip! del Transantiago"/>
+		<meta name="keywords" content="saldo, consulta, tarjeta, bip!, transantiago" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Consulta tu SaldoBip!</title>
+
+		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+		<link type="text/css" rel="stylesheet" href="css/main.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
+		<link type="text/css" rel="stylesheet" href="css/webapp.css" />
 	</head>
-	<body >
-		<div class="wrap">
-			<div class="rmm">
-				<ul>
-					<li>
-						<label style="color: #4DB227; font-weight: bold;">Menú</label>
-					</li>
-					<li>
-						<a href='index.html'>Consulta de Saldo</a>
-					</li>
-					<li>
-						<a href='about.html'>Acerca de</a>
-					</li>
-					<li>
-						<a href='http://www.psep.cl' target="_blank">Psep.cl</a>
-					</li>
-				</ul>
+	<body>
+		<div data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"> </a>
+				SaldoBip!
+				<img src="" id="install" class="friends right ui-link"/>
 			</div>
-			<div class="bodyMobile">
-				<hr class="separator"/>
-				<div class="container">
-					<div id="divForm" class="content">
-						<article>
-							<p>
-								<input id="idTarjeta" class="inputText" type="number" maxlength="15" placeholder="Ingresa N° de Tarjeta Bip!" />
-							</p>
-							<p>
-								<button id="button" class="button" style="color: rgb(255, 255, 255); background-color: rgb(77, 178, 39);">
-									Consultar
-								</button>
-							</p>
-						</article>
-					</div>
+			<div id="content" data-role="content">
+				<p>
+					<h1>Consulta tu Saldo</h1>
+				</p>
+				<div id="divForm" class="content">
+					<article>
+						<p>
+							<input id="idTarjeta" class="inputText" type="number" maxlength="15" placeholder="Ingresa N° de Tarjeta Bip!" />
+						</p>
+						<p>
+							<button id="consultar">
+								Consultar
+							</button>
+						</p>
+					</article>
 				</div>
-				<hr class="separator"/>
-				<footer class="footer">
-					<div class="social">
-						<a href="http://www.psep.cl/" target="_blank"><img src="images/psepcl.png" alt=""></a>
-					</div>
-				</footer>
 			</div>
 		</div>
-		<script src="js/jquery-1.9.1.js"></script>
-		<script src="js/jquery.blockUI.js"></script>
-		<script src="js/menu.js"></script>
-		<script src="js/ConsultaAction.js"></script>
+
+		<div id="acerca-de" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"> </a>
+				SaldoBip!
+				<a class="friends right" href="#" onclick="alert('hiciste click!')"> </a>
+			</div>
+			<div class="content" data-role="content">
+				<div style="font-size: 0.9em;">
+					<p>
+						<h1>Acerca de</h1>
+					</p>
+					<article>
+						<p>
+							SaldoBip!, antes ConsultaBip!, nace como una propuesta de suite de aplicaciones
+							útiles disponibles para Firefox OS que traten sobre los servicios en Chile.
+						</p>
+						<p>
+							Recuerda, este es Software Libre bajo <a href="https://github.com/Psep/ConsultaBip" target="_blank">Licencia GPLv3</a>.
+						</p>
+					</article>
+					<p>
+						<button onclick="inicio();">
+							Volver
+						</button>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="terminos-uso" data-role="page">
+			<div class="header">
+				<a href="#menu" data-ajax="false"> </a>
+				SaldoBip!
+				<a class="friends right" href="#" onclick="alert('hiciste click!')"> </a>
+			</div>
+			<div class="content" data-role="content">
+				<div style="font-size: 0.9em;">
+					<p>
+						<h1>Términos de Uso</h1>
+					</p>
+					<article>
+						<p>
+							asd
+						</p>
+						<p>
+							Recuerda, este es Software Libre bajo <a href="https://github.com/Psep/ConsultaBip" target="_blank">Licencia GPLv3</a>.
+						</p>
+					</article>
+					<p>
+						<button onclick="inicio();">
+							Volver
+						</button>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<nav id="menu">
+			<ul>
+				<li class="Selected">
+					<a href="index.html">Consulta tu Saldo</a>
+				</li>
+				<li>
+					<a href="index.html#acerca-de">Acerca de</a>
+				</li>
+				<li>
+					<a href="index.html#terminos-uso">Terminos de Uso</a>
+				</li>
+				<li class="Label">
+					Links Externos
+				</li>
+				<li>
+					<a href="http://www.psep.cl/" target="_blank" rel="external">Psep.cl</a>
+				</li>
+				<li>
+					<a href="http://psep.github.io/ConsultaBip/" target="_blank" rel="external">Web Oficial</a>
+				</li>
+			</ul>
+		</nav>
+
 	</body>
+	<footer>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+		<script type="text/javascript" src="js/webapp.js"></script>
+	</footer>
 </html>

@@ -1,5 +1,5 @@
 {
-    "version": "1",
+    "version": "1.2",
     "name": "SaldoBip!",
     "launch_path": "/index.html",
     "description": "Consulta Saldo Tarjeta Bip!",
@@ -16,5 +16,4 @@
     },
     "installs_allowed_from": ["*"],
     "default_locale": "es"
-    
 }

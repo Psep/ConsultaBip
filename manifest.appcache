@@ -2,20 +2,17 @@ CACHE MANIFEST
 # Version 0.6799999
 
 index.html
-about.html
-css/demo.css
-css/menu.css
-css/model.css
-css/style.css
-images/consultabip.png
-images/gplus.png
-images/mail.png
-images/psepcl.png
-images/twitter.png
-js/ConsultaAction.js
-js/jquery-1.9.1.js
-js/menu.js
+css/jquery.mmenu.css
+css/jquery.mobile-1.2.0.min.css
+css/main.css
+css/webapp.css
+images/add25.png
+images/indice.png
+js/webapp.js
 js/jquery.blockUI.js
+js/jquery.min.js
+js/jquery.mmenu.js
+js/jquery.mobile-1.3.2.min.js
 
 NETWORK:
 *
