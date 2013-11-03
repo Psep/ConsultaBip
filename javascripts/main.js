@@ -19,7 +19,7 @@ if (navigator.mozApps) {
 			// to connect the button with an action) the app gets installed. If the installation
 			// is successful, the install instructions are hidden.
 			var install = document.querySelector("#install"), manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "webapp/manifest.webapp";
-
+			alert(manifestURL);
 			install.className = "show-install";
 			// connect the click on the button with the installation
 			install.onclick = function() {
