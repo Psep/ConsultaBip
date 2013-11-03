@@ -1,8 +1,8 @@
 {
     "version": "1.2",
     "name": "SaldoBip!",
-    "launch_path": "ConsultaBip/webapp/index.html",
-    "description": "Consulta el Saldo de la Tarjeta Bip!",
+    "launch_path": "/ConsultaBip/webapp/index.html",
+    "description": "/Consulta el Saldo de la Tarjeta Bip!",
     "developer": {
         "name": "Pablo Sepulveda",
         "url": "http://www.psep.cl"
@@ -14,11 +14,11 @@
     	}
   	},
     "icons": {
-        "16": "ConsultaBip/webapp/images/logo16.png",
-        "32": "ConsultaBip/webapp/images/logo32.png",
-        "48": "ConsultaBip/webapp/images/logo48.png",
-        "64": "ConsultaBip/webapp/images/logo64.png",
-        "128": "ConsultaBip/webapp/images/logo128.png"
+        "16": "/ConsultaBip/webapp/images/logo16.png",
+        "32": "/ConsultaBip/webapp/images/logo32.png",
+        "48": "/ConsultaBip/webapp/images/logo48.png",
+        "64": "/ConsultaBip/webapp/images/logo64.png",
+        "128": "/ConsultaBip/webapp/images/logo128.png"
     },
     "default_locale": "es"
 }
