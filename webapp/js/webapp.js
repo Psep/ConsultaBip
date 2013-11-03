@@ -55,14 +55,11 @@ $(function() {
 
 	$('#menu a[rel!="external"]').on('click', function() {
 		var _t = this;
-		$('#menu').one('closed.mm', function() {
-			window.location = _t.href;
-			
-			$.mobile.changePage(_t.href, {
-				transition : 'slide', 
-				reloadPage: true,
-				allowSamePageTransition: true
-			});
+		$('#menu').one('closed.mm', function() {			
+			// $.mobile.changePage(_t.href, {
+				// transition : 'slide'
+			// });
+			window.location=_t.href;
 		});
 	});
 });
