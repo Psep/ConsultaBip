@@ -179,7 +179,7 @@ function successCallback(ajaxResponse) {
 	html += "<br />";
 	html += '<div class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" data-disabled="false" aria-disabled="false">';
 	html += '<span class="ui-btn-inner"><span class="ui-btn-text">Volver</span></span>';
-	html += '<button class="ui-btn-hidden" data-disabled="false"  onclick="inicio();">Volver</button></div>';
+	html += '<button class="ui-btn-hidden" data-disabled="false"  onclick="inicio();">Ir al Inicio</button></div>';
 	html += "</article>";
 	document.getElementById('divForm').innerHTML = html;
 }
