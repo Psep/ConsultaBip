@@ -11,11 +11,10 @@
     	"es": {
      		"name": "SaldoBip!",
       		"description": "Consulta el Saldo de la Tarjeta Bip!"
-    	}
+    		}
   	},
     "icons": {
-	"128": "images/logo128.png",
-        "60": "images/logo64.png"
+	"128": "images/logo128.png"
     },
     "default_locale": "es"
 }
