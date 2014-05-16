@@ -115,7 +115,7 @@ $("#consultar").click(function() {
 			$.ajax({
 				type : 'GET',
 				dataType : 'json',
-				url : 'http://www.psep.cl/api/BipService.php?',
+				url : 'http://www.psep.cl/api/Bip.php?',
 				data : data,
 				success : successCallback,
 				error : errorCallback
